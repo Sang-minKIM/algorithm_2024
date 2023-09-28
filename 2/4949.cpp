@@ -12,17 +12,17 @@ bool check(string input) {
                 vps.push(input[j]);
             }else if(input[j] == ')'){
                 if(vps.size()) {
-                   char topc = vps.top();
-                   if(topc == '[' ) return false;
-                   if(topc == '(' ) vps.pop();
+                    char topc = vps.top();
+                    if(topc == '(' ) vps.pop();
+                    else return false;
                 } else {
                     return false;
                 }
             } else if(input[j] == ']'){
                 if(vps.size()) {
-                   char topc = vps.top();
-                   if(topc == '[' ) vps.pop();
-                   if(topc == '(' ) return false;
+                    char topc = vps.top();
+                    if(topc == '[' ) vps.pop();
+                    else return false;
                 } else {
                     return false;
                 }
