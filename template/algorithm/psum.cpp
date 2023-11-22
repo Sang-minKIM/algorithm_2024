@@ -1,4 +1,5 @@
-// 수열 (누적합)
+// 누적합
+
 #include <bits/stdc++.h>
 using namespace std;
 int n, k, psum[100004], temp, msum = -1e9;
