@@ -1,18 +1,22 @@
+// 알파벳 개수
+
 #include <bits/stdc++.h>
 using namespace std;
-int a[26]; // 전역변수로 선언하면 0으로 초기화됨
+
+int a[26];
 string s;
-int main () {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
+
+int main() {
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
     cin >> s;
-    for(int i = 0; i < s.length(); i++) {
-        a[s[i] - 97]++;
+    for (char c : s) {
+        a[c - 'a']++;
     }
-   
-   for(int ret : a) {
-    cout << ret << " ";
-   }
+
+    for (int ans : a) {
+        cout << ans << " ";
+    }
     return 0;
 }
