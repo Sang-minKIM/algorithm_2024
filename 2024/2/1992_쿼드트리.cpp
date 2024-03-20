@@ -42,3 +42,5 @@ int main() {
     cout << ans;
     return 0;
 }
+
+40분
