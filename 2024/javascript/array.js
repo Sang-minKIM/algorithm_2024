@@ -1,6 +1,7 @@
 // duplicate([1,2,3,4,5]) => [1,2,3,4,5,1,2,3,4,5]
 const test = [1, 2, 3, 4, 5];
 const test2 = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5];
+const test3 = [3, 2, 4, 1, 5];
 
 const duplicate = (arr) => {
     return arr.concat(arr);
@@ -36,6 +37,7 @@ console.log(
 
 Array.prototype.myMap = function (callback) {
     const result = [];
+    console.log(this);
     for (let i = 0; i < this.length; i++) {
         const newElement = callback(this[i], i, this);
         result.push(newElement);
@@ -43,9 +45,23 @@ Array.prototype.myMap = function (callback) {
     return result;
 };
 
+Array.prototype.arrowMap = (callback) => {
+    const result = [];
+    console.log(this);
+    for (let i = 0; i < this.length; i++) {
+        result.push(callback(this[i], i, this));
+    }
+    return result;
+};
+
 console.log(
     "map",
     test.myMap((v, i) => 2 * v)
+);
+
+console.log(
+    "arrowMap",
+    test.arrowMap((v, i) => 2 * v)
 );
 
 // filter()
