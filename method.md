@@ -6,7 +6,7 @@
 -   insert(위치, 문자열)
 -   erase(위치, 크기)
 -   pop_back()
--   find(문자열)
+-   find(문자열) string::npos
 -   substr(위치, 크기)
 -   reverse(시작 위치, 끝 위치)(STL 함수임 나머지는 메서드라 `str.~~` reverse만 `reverse(str.begin(), str.end())`)
 
@@ -61,6 +61,7 @@ tie(a, b) = p
 -   begin()
 -   end()
 -   advance(iterator, cnt)
+-
 
 # function
 
